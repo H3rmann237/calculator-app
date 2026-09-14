@@ -1,30 +1,38 @@
-<!doctype html> 
-<html> 
-    <head> 
-        <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
-    </head> 
-    <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center px-4 py-10"> 
-        <header class="text-center mb-8"> <h1 class="text-3xl font-bold text-pink-500">CalcMate</h1> 
-            <p class="text-slate-400 mt-2">Calculate, keep a history, see your last result.</p> 
-        </header> 
-        <main class="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-6"> 
-            <form id="calc-form" class="flex flex-col sm:flex-row gap-3 mb-6"></form>
-                <input id="first-number" type="number" required placeholder="First number" class="flex-1 bg-slate-800 rounded-lg px-3 py-2 text-sm" /> 
-                <select id="operator" class="bg-slate-800 rounded-lg px-2 py-2 text-sm"> 
-                    <option value="+">+</option> <option value="-">-</option> 
-                    <option value="*">*</option> <option value="/">/</option> 
-                </select> 
-                <input id="second-number" type="number" required placeholder="Second number" class="flex-1 bg-slate-800 rounded-lg px-3 py-2 text-sm" /> 
-                <button type="submit" class="bg-pink-600 text-white font-semibold px-4 py-2 rounded-lg text-sm">Calculate</button> 
-            </form> 
-            <ul id="calc-history" class="space-y-2 mb-6"></ul> 
-            <div id="summary" class="border-t border-slate-800 pt-4 text-sm text-slate-300 hidden"> 
-                <p>Last result: <span id="last-result" class="font-semibold text-pink-400">0</span></p> 
-                <p>Calculations so far: <span id="calc-count" class="font-semibold">0</span></p> 
-            </div> 
-            <button id="clear-btn" type="button" class="mt-6 w-full bg-slate-800 text-slate-300 text-sm py-2 rounded-lg">Clear All</button> 
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center px-4 py-10">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-pink-500">CalcMate</h1>
+            <p class="text-slate-400 mt-2">Calculate, keep a history, see your last result.</p>
+        </header>
+        <main class="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-6">
+            <form id="calc-form" class="flex flex-col sm:flex-row gap-3 mb-6">
+                <input id="first-number" type="number" required placeholder="First number" class="flex-1 bg-slate-800 rounded-lg px-3 py-2 text-sm"/>
+                <select id="operator" class="bg-slate-800 rounded-lg px-2 py-2 text-sm">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input id="second-number" type="number" required placeholder="Second number" class="flex-1 bg-slate-800 rounded-lg px-3 py-2 text-sm"/>
+                <button type="submit" class="bg-pink-600 text-white font-semibold px-4 py-2 rounded-lg text-sm">Calculate</button>
+            </form>
+            
+            <ul id="calc-history" class="space-y-2 mb-6"></ul>
+            
+            <div id="summary" class="border-t border-slate-800 pt-4 text-sm text-slate-300 hidden">
+                <p>Last result: <span id="last-result" class="font-semibold text-pink-400">0</span></p>
+                <p>Calculations so far: <span id="calc-count" class="font-semibold">0</span></p>
+                <p>Average: <span id="average-value" class="font-semibold text-pink-400">0</span></p>
+            </div>
+
+            <button id="clear-btn" type="button" class="mt-6 w-full bg-slate-800 text-slate-300 text-sm py-2 rounded-lg">Clear All</button>
         </main> 
-        <script src="script.js"></script> 
-    </body> 
+        <script src="script.js"></script>
+    </body>
 </html>
